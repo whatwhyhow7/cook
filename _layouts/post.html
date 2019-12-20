@@ -46,7 +46,7 @@
                                     {% elsif post.image %}
                                         <img src="{{ post.image }}">
                                     {% else %}
-                                        <img src="assets/img/off.jpg">
+                                        <img src="/assets/img/off.jpg">
                                     {% endif %}
                                     <h3>{{ post.title }}</h3>
                                 </a>
@@ -122,7 +122,7 @@
                 {% if author.photo %}
                 "image": "{{ author.photo }}",
                 {% else %}
-                "image": {{ "assets/img/user.jpg" | prepend: site.baseurl | prepend: site.url }},
+                "image": {{ "/assets/img/user.jpg" | prepend: site.baseurl | prepend: site.url }},
                 {% endif %}
                 "jobTitle": "{{ author.position }}",
                 "url": "{{ author.url | prepend: site.baseurl | prepend: site.url }}",
