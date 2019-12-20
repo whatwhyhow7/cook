@@ -1,12 +1,12 @@
 ---
 layout: page
-title: About
+title: 关于我
 description: Some description.
 permalink: /about/
 menu: true
 ---
 
-<img class="img-rounded" src="{{site.baseurl}}/assets/img/uploads/profile.png" alt="Thiago Rossener" width="200">
+<img class="img-rounded" src="{{site.baseurl}}/assets/img/uploads/profile.png" width="200">
 
 # About
 
