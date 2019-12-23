@@ -1,10 +1,10 @@
 <div class="recommendation">
     <div class="message">
-        <strong>Why don't you read something next?</strong>
+        <strong>再试一个菜？</strong>
         <div>
             <button>
                 <svg><use xlink:href="#icon-arrow-right"></use></svg>
-                <span>Go back to top</span>
+                <span>回到顶部</span>
             </button>
         </div>
     </div>
@@ -22,7 +22,7 @@
             {% elsif recommendation.image %}
                 <img src="{{ recommendation.image }}">
             {% else %}
-                <img src="/assets/img/off.jpg">
+                <img src="{{site.baseurl}}/assets/img/off.jpg">
             {% endif %}
         </div>
         <h3 class="title">{{ recommendation.title }}</h3>

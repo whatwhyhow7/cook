@@ -34,7 +34,7 @@
 
             {% if site.two_columns_layout %}
                 <aside class="see-also">
-                    <h2>See also</h2>
+                    <h2>相关菜谱</h2>
                     <ul>
                         {% assign next_posts = site.posts | where_exp:"post","post.is_generated != true" | where_exp:"post","post.path != page.path" %}
                         {% assign shuffled_array = next_posts | shuffle %}
@@ -46,7 +46,7 @@
                                     {% elsif post.image %}
                                         <img src="{{ post.image }}">
                                     {% else %}
-                                        <img src="/assets/img/off.jpg">
+                                        <img src="{{site.baseurl}}/assets/img/off.jpg">
                                     {% endif %}
                                     <h3>{{ post.title }}</h3>
                                 </a>
@@ -66,7 +66,7 @@
 
         <!-- Show modal if the post is the last one -->
         {% if paginator.is_last and site.show_modal_on_finish_post %}
-            {% include modal.html title="You made it!" subtitle="Why don't you try another?" %}
+            {% include modal.html title="看完啦！" subtitle="还有其他推荐的哦~" %}
         {% endif %}
 
         <!-- Show modal before user leaves the page -->
