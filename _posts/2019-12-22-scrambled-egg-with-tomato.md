@@ -7,7 +7,7 @@ description: >-
   菜谱说明
 image: https://res.cloudinary.com/dm7h7e8xj/image/upload/v1559822137/theme11_vei7iw.jpg
 optimized_image: https://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,w_380/v1559822137/theme11_vei7iw.jpg
-category: 分类
+category: 家常菜
 tags:
   - 标签 1
   - 标签 2
