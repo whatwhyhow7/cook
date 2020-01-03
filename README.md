@@ -1,6 +1,6 @@
 # whatwhyhow7's kitchen
 
-这是 [@whatwhyhow7](https://whatwhyhow7.github.io/cook) 的私房菜谱。
+这是 [@whatwhyhow7](https://whatwhyhow7.github.io/cook) 的私房菜谱 🍺🍞🥑。
 
 ## 主要内容
 
