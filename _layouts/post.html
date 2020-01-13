@@ -83,9 +83,6 @@
         {% if author.github_username %}
             {% assign author_urls = author_urls | append: '"https://github.com/' | append: author.github_username | append: '",' %}
         {% endif %}
-        {% if author.linkedin_username %}
-            {% assign author_urls = author_urls | append: '"https://www.linkedin.com/in/' | append: author.linkedin_username | append: '",' %}
-        {% endif %}
 
         <script type="application/ld+json">
         {

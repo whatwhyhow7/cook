@@ -10,11 +10,6 @@
           <svg><use xlink:href="#icon-instagram"></use></svg>
         </a>
       {% endif %}
-      {% if site.linkedin_username %}
-        <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn">
-          <svg><use xlink:href="#icon-linkedin"></use></svg>
-        </a>
-      {% endif %}
     </p>
 
     {% include links.html %}
@@ -30,9 +25,6 @@
 {% assign social_urls = '' %}
 {% if site.github_username %}
     {% assign social_urls = social_urls | append: '"https://github.com/' | append: site.github_username | append: '",' %}
-{% endif %}
-{% if site.linkedin_username %}
-    {% assign social_urls = social_urls | append: '"https://www.linkedin.com/in/' | append: site.linkedin_username | append: '",' %}
 {% endif %}
 
 <!-- Include the script that allows Netlify CMS login -->
