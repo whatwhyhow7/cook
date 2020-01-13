@@ -105,11 +105,7 @@
             "author": {
                 "@type": "Person",
                 "name": "{{ author.display_name }}",
-                {% if author.photo %}
                 "image": "{{ author.photo }}",
-                {% else %}
-                "image": {{ "/assets/img/user.jpg" | prepend: site.baseurl | prepend: site.url }},
-                {% endif %}
                 "jobTitle": "{{ author.position }}",
                 "url": "{{ author.url | prepend: site.baseurl | prepend: site.url }}",
                 "sameAs": [

@@ -6,7 +6,7 @@ permalink: /about/
 menu: true
 ---
 
-<img class="img-rounded" src="{{site.baseurl}}/assets/img/uploads/profile.png" width="200">
+<img class="img-rounded" src="{{site.baseurl}}/assets/img/profile.jpg" width="200">
 
 # About
 

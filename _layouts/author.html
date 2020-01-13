@@ -3,11 +3,7 @@ layout: page
 ---
 
 <div class="staff">
-  {% if page.photo %}
-    <img class="img-rounded" src="{{ page.photo }}" alt="{{ author.display_name }}">
-  {% else %}
-    <img class="img-rounded" src="{{site.baseurl}}/assets/img/user.jpg" alt="{{ author.display_name }}">
-  {% endif %}
+  <img class="img-rounded" src="{{ page.photo }}" alt="{{ author.display_name }}">
 
   <h1>{{ page.display_name }}</h1>
 
@@ -39,11 +35,7 @@ layout: page
     "@context": "http://schema.org",
     "@type": "Person",
     "name": "{{ page.display_name }}",
-    {% if page.photo %}
     "image": "{{ page.photo }}",
-    {% else %}
-    "image": {{ "/assets/img/user.jpg" | prepend: site.baseurl | prepend: site.url }},
-    {% endif %}
     "jobTitle": "{{ page.position }}",
     "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
     "sameAs": [
