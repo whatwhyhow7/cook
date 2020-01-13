@@ -1,15 +1,13 @@
 # Site Settings
 name: Hower Kitchen
 title: Hower Kitchen
-description: Jekflix is a template for Jekyll inspired by Netflix and made by Thiago Rossener.
+description: whatwhyhow7's kitchen
 tags:
   - blog
   - template
   - jekyll
   - theme
-  - netlify
-email: youremail@xyz.com
-disqus_username: disqus_username
+email: wangwenhao.rar@gmail.com
 show_hero: true
 
 
