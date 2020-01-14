@@ -18,7 +18,7 @@ layout: main
     {% if site.show_hero and paginator == nil or paginator.page == 1 %}
         <!-- Hero -->
         {% assign featured = posts.first %}
-        <section class="hero" style="background-image: url({{ featured.image }})">
+        <section class="hero" style="background-image: url({{site.baseurl}}/assets/img/{{ featured.title }}/0.jpg)">
             <div class="pixels"></div>
             <div class="gradient"></div>
             <div class="content">
@@ -47,22 +47,7 @@ layout: main
                     <div class="cover">
                         {% include new-post-tag.html date=post.date %}
                         <a href="{{ post.url | prepend: site.baseurl }}" {%if isnewpost %}class="new-post"{% endif %}>
-                            {% if post.optimized_image %}
-                                <img src="{{site.baseurl}}/assets/img/placeholder.png" width="100%" data-url="{{ post.optimized_image }}" class="preload">
-                                <noscript>
-                                    <img src="{{ post.optimized_image }}" width="100%">
-                                </noscript>
-                            {% elsif post.image %}
-                                <img src="{{site.baseurl}}/assets/img/placeholder.png" width="100%" data-url="{{ post.image }}" class="preload">
-                                <noscript>
-                                    <img src="{{ post.image }}" width="100%">
-                                </noscript>
-                            {% else %}
-                                <img src="{{site.baseurl}}/assets/img/placeholder.png" width="100%" data-url="{{site.baseurl}}/assets/img/off.jpg" class="preload">
-                                <noscript>
-                                    <img src="{{site.baseurl}}/assets/img/off.jpg" width="100%">
-                                </noscript>
-                            {% endif %}
+                            <img src="{{site.baseurl}}/assets/img/{{ post.title }}/0.jpg" width="100%" data-url="{{site.baseurl}}/assets/img/{{ post.title }}/0.jpg" class="preload">
                         </a>
                     </div>
                     <div class="box-info">
@@ -99,21 +84,6 @@ layout: main
 {% if site.github_username %}
     {% assign social_urls = social_urls | append: '"https://github.com/' | append: site.github_username | append: '",' %}
 {% endif %}
-{% if site.facebook_username %}
-    {% assign social_urls = social_urls | append: '"https://www.facebook.com/' | append: site.facebook_username | append: '",' %}
-{% endif %}
-{% if site.twitter_username %}
-    {% assign social_urls = social_urls | append: '"https://twitter.com/' | append: site.twitter_username | append: '",' %}
-{% endif %}
-{% if site.medium_username %}
-    {% assign social_urls = social_urls | append: '"https://medium.com/@' | append: site.medium_username | append: '",' %}
-{% endif %}
-{% if site.instagram_username %}
-    {% assign social_urls = social_urls | append: '"https://www.instagram.com/' | append: site.instagram_username | append: '",' %}
-{% endif %}
-{% if site.linkedin_username %}
-    {% assign social_urls = social_urls | append: '"https://www.linkedin.com/in/' | append: site.linkedin_username | append: '",' %}
-{% endif %}
 
 <script type="application/ld+json">
 {
@@ -146,7 +116,6 @@ layout: main
                 "name": "{{ post.title }}",
                 "headline": "{{ post.subtitle }}",
                 "description": "{{ post.description }}",
-                "image": "{{ post.image }}",
                 "url": "{{ post.url | prepend: site.baseurl | prepend: site.url }}",
                 "inLanguage": "{{ site.language }}",
                 "dateCreated": "{{ post.date | date: '%Y-%m-%d/' }}",
