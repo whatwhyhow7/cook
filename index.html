@@ -48,7 +48,7 @@ layout: main
                         {% include new-post-tag.html date=post.date %}
                         <a href="{{ post.url | prepend: site.baseurl }}" {%if isnewpost %}class="new-post"{% endif %}>
                             <img src="{{site.baseurl}}/assets/img/{{ post.title }}/0.jpg" data-url="{{site.baseurl}}/assets/img/{{ post.title }}/0.jpg" class="preload"
-                                style="width: 325px; height: 200px;">
+                                style="height: 200px;">
                         </a>
                     </div>
                     <div class="box-info">
