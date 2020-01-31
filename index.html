@@ -56,9 +56,7 @@ layout: main
                             {% include date.html date=post.date %}
                         </time>
                         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                            <h2 class="post-title">
-                                {{ post.title }}
-                            </h2>
+                            <h2 class="post-title">{{ post.title }} {{ post.emoji }}</h2>
                         </a>
                         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
                             <p class="description">{{ post.description }}</p>
